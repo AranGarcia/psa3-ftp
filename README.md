@@ -19,3 +19,9 @@ Running a bash session
 ```sh
 docker exec -it ftps bash
 ```
+
+Copying the `vsftp.d` config file
+
+```sh
+docker cp ed1db7ab3c76:/etc/vsftpd.conf .
+```
