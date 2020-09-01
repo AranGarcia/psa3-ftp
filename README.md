@@ -11,7 +11,8 @@ docker build . --tag ftpserver
 Running the docker container
 
 ```sh
-docker run --name ftps --rm -it ftpserver
+docker run -p 21:21 --name ftps --rm -it ftpserver
+
 ```
 
 Running a bash session
