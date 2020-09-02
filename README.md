@@ -5,7 +5,7 @@
 Building the image
 
 ```sh
-docker build . --tag ftpserver
+docker build . --no-cache --tag ftpserver
 ```
 
 Running the docker container
