@@ -32,8 +32,8 @@ make run
 - Configuración de puerto de operación
   - [X] Puerto de operación diferente al puerto estándar
 - Servidor de aplicación utilizando el protocolo seguro para la transferencia de archivos
-  - [ ] Definición de certificados de operación
-  - [ ] Transferencia cifrada entre extremos
+  - [X] Definición de certificados de operación
+  - [X] Transferencia cifrada entre extremos
 - Implementación de de jaulas para diferentes usuarios
   - [X] Directorio de operación local a usuarios del sistema
 - Configuración de los sistemas de registro de acceso al sistema
