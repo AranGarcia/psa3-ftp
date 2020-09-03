@@ -2,7 +2,7 @@ build:
 	docker build . --no-cache --tag ftpserver
 
 run:
-	docker run -d -p 21:21 --name ftps --rm -it ftpserver
+	docker run -d -p 2121:2121 --name ftps --rm -it ftpserver
 
 bash:
 	docker exec -it ftps bash
