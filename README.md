@@ -37,7 +37,7 @@ make run
 - Implementación de de jaulas para diferentes usuarios
   - [X] Directorio de operación local a usuarios del sistema
 - Configuración de los sistemas de registro de acceso al sistema
-  - [ ] Configurar los diferentes niveles de operación de as bitácoras
+  - [X] Configurar los diferentes niveles de operación de as bitácoras
 - Resumen de operación del servidor (Recursos consultados/editados, usuario, tipo de operación realizada)
   - [ ] Mostrar resumen de usuarios (Nombre/IP/Dominio)
   - [ ] Mostrar resumen de recursos manipulados/consultados
