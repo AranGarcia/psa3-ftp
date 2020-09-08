@@ -1,10 +1,11 @@
 FROM panubo/vsftpd:latest
 
 # Users and groups
-RUN useradd user1 && \
-    useradd user2 && \
-    useradd user3
-
+RUN addgroup groupa && \
+    addgroup groupb
+RUN useradd user1 -g groupa && \
+    useradd user2 -g groupb && \
+    useradd user3 -g groupb
 RUN echo "user1:user1" | chpasswd && \
     echo "user2:user2" | chpasswd && \
     echo "user3:user3" | chpasswd
@@ -17,9 +18,25 @@ COPY ssl/vsftpd.crt /etc/ssl/certs/
 COPY conf/vsftpd_ssl.conf /etc/vsftpd_ssl.conf
 
 # FTP Resources
-ADD resources /srv/
+RUN mkdir -p /home/user1/ftp
+RUN mkdir -p /home/user2/ftp
+RUN mkdir -p /home/user3/ftp
+
+COPY resources/README.md /home/user1/README.md
+ADD resources/user1 /home/user1/ftp/
+ADD resources/user2 /home/user2/ftp/
+ADD resources/user3 /home/user3/ftp/
+
+RUN chown -R user1:groupa /home/user1
+RUN chmod a-w /home/user1
+
+RUN chown -R user2:groupa /home/user2
+RUN chmod a-w /home/user2
+
+RUN chown -R user3:groupa /home/user3
+RUN chmod a-w /home/user3
 
 EXPOSE 2121
 
 # Load configuration that enables SSL
-ENTRYPOINT [ "vsftpd" , "/etc/vsftpd_ssl.conf"]
+ENTRYPOINT [ "vsftpd" , "/etc/vsftpd_ssl.conf"] 

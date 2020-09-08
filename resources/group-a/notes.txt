@@ -1,0 +1,3 @@
+https://linuxconfig.org/how-to-setup-and-use-ftp-server-in-ubuntu-linux
+https://security.appspot.com/vsftpd/vsftpd_conf.html#lbAG
+https://vitux.com/install-vsftpd-ftp-server-tls-ubuntu/
