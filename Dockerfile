@@ -15,7 +15,7 @@ COPY ssl/vsftpd.key /etc/ssl/private/
 COPY ssl/vsftpd.crt /etc/ssl/certs/
 
 # FTP config files
-COPY conf/vsftpd_ssl.conf /etc/vsftpd_ssl.conf
+COPY conf/vsftpd.conf /etc/vsftpd.conf
 COPY conf/hosts.allow /etc/hosts.allow
 COPY conf/hosts.deny /etc/hosts.deny
 
@@ -35,6 +35,3 @@ RUN chown -R user1:groupa /home/user1 && \
     chmod -R 755 /home/user3
 
 EXPOSE 2121
-
-# Load configuration that enables SSL
-ENTRYPOINT [ "vsftpd" , "/etc/vsftpd_ssl.conf"] 
