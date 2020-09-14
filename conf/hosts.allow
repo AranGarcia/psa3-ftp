@@ -8,3 +8,4 @@
 # daemon name. See rpcbind(8) and rpc.mountd(8) for further information.
 #
 
+vsftpd: 172.17.0.1 172.17.0.2 172.17.0.3
